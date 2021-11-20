@@ -34,14 +34,43 @@
             <img src="./images/blowing-wind.jpg" alt="blowing wind">
         </div>
 
+        <div class="info">
+            <p>InSight is an ___ which takes daily weather measeurements on the surface of Mars. The measeurements are taken fron the Elysium Planitia site on mars. This is a flat, smooth plain near the equator of the planet.</p>
+            <p>To learn more about InSight's mission, <a href="https://mars.nasa.gov/insight/mission/overview/">Click Here!</a> </p>
+        </div>
+
+         <div class="unit-switch">
+            <label for="celcius">°C</label> 
+            <input type="radio" id="celcius" name="unit-switch" checked>
+            
+            <!-- When clicked, checkbox needs to change -->
+            <button class="unit-toggle"></button>
+
+            <label for="fahrenheit">°F</label> 
+            <input type="radio" id="fahrenheit" name="unit-switch">
+         </div>
+
+
+
+          <!-- 7 day weather history -->`
+         <section class="previous-section">
+             <h2 class="section-title">Previous 10 Days</h2>
+
+             <div class="previous-week">
+                <div class="previous-day">
+                    <h3 class="prev-day-title">Sol 371</h3>
+                    <div class="prev-day-date"></div>
+                    <div class="reading">High: -20°C</div>
+                    <div class="reading">Low: -100°C</div>
+                    <button class="prev-day-more-info">more info</button>
+                </div>
+             </div>
+         </section>
     </div>
 
 
 
 
-    <!-- 7 day weather history -->
-    <div class="previous-weather">
-
-    </div>
+  
 </body>
 </html>
