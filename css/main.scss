@@ -1,0 +1,135 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {                 // custom properties
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-semi: 500;
+    --fw-bold: 700;
+    --fs-body: 1rem; 
+    --fs-xl: 4rem; 
+    --fs-h1: 2.25rem; 
+    --fs-h2: 1.5rem; 
+    --clr-light: #fff;
+    --clr-grey: #989898;
+    --clr-dark: #444;
+    --clr-accent: #D06D6D;
+    --clr-accent-dark: #613131;
+}
+
+/* Hiding 10-day Forecast History section https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+hides the content, but not from the screen-reader */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+h1, h2, h3 {
+    line-height: 1;
+}
+
+a {
+    color: var(--clr-accent);
+
+    &:hover {
+        color: var(--clr-accent-dark);
+    }
+}
+
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    // line-height: 1.6;
+    background-image: url(../images/mars-background.jpg);
+    background-size: cover;
+    // height: 100vh;
+    // overflow: hidden;
+    color: var(--clr-light);
+}
+
+.hero {
+    background: hsla(0, 0%, 0%, 0.6);
+    padding: 2em;
+    width: 75%;
+    margin: 4em auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+}
+
+.hero-title {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-light);
+    text-transform: uppercase;
+    color: var(--clr-accent);
+    letter-spacing: 1px;
+    grid-column: 1 / -1;
+}
+.section-title {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    margin: 0;
+}
+.section-title--large {
+    font-size: var(--fs-xl);
+}
+.reading {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-light);
+    color: var(--clr-grey);
+    margin: 0;
+}
+
+.date {
+    font-size: var(--fs-h2);
+    color: var(--clr-grey);
+    margin: 0;
+}
+
+.temperature-section {   
+    --border-spacers: solid .25em var(--clr-accent-dark); // custom property with LOCAL scope
+    border-left: var(--border-spacers);
+    border-right: var(--border-spacers);
+    padding: 0 2em;
+    .temperature-data {
+        padding-top: 0.5em;
+    }
+    .reading {
+        line-height: 1.2;
+    }
+}
+
+
+.wind-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    .wind-section-text {
+       grid-column: 2 / 3; 
+       grid-row: 1 / 2;
+    }
+    .img-cloud {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        height: auto; 
+        width: auto; 
+        max-width: 100px; 
+        max-height: 100px;
+    }
+}
+
+.info {
+    grid-column: 1 / 3;
+}
+
+.unit-switch {
+    grid-column: 3 / 4;
+}
