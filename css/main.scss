@@ -50,7 +50,7 @@ body {
     // line-height: 1.6;
     background-image: url(../images/mars-background.jpg);
     background-size: cover;
-    // height: 100vh;
+    height: 100vh;
     // overflow: hidden;
     color: var(--clr-light);
 }
@@ -130,6 +130,55 @@ body {
     grid-column: 1 / 3;
 }
 
-.unit-switch {
+.unit {
     grid-column: 3 / 4;
+    color: var(--clr-light);
+    align-self: flex-end;
+    justify-self: flex-end;
+    display: flex;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+    label {
+        cursor: pointer;
+    }
+    input { // hides radio button circle
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    &-toggle{ // button to toggle temperature unit swap
+        cursor: pointer;
+        width: 3.5em;
+        border-radius: 100em;
+        border: 2px solid var(--clr-light);
+        background-color: hsla(0, 0%, 0%, 0.4);
+        padding: 0;
+        margin: 0 .5em;
+
+        &::after { //circle inside the switch
+            content: '';
+            align-self: center;
+            display: block;
+            background: var(--clr-light);
+            height: 1em;
+            width: 1em;
+            border-radius: 50%;
+            margin: 3px;
+            margin-left: auto;
+        }
+    }    
 }
+
+:checked ~ .unit-toggle::after { // any switch button coming after "checked"
+    margin-left: 3px;
+    border-color: red;
+}
+
