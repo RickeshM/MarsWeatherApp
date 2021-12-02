@@ -113,15 +113,10 @@ body {
 
 .wind-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: fit-content(100%) 1fr;
    
-    .wind-section-text {
-       grid-column: 2 / 3; 
-       grid-row: 1 / 2;
-    }
     .img-cloud {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
+        margin-left: 1em;
         height: auto; 
         width: auto; 
         max-width: 100px; 

@@ -120,26 +120,12 @@ body {
 .wind-section {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-}
-
-.wind-section .wind-section-text {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
+  -ms-grid-columns: fit-content(100%) 1fr;
+      grid-template-columns: fit-content(100%) 1fr;
 }
 
 .wind-section .img-cloud {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
+  margin-left: 1em;
   height: auto;
   width: auto;
   max-width: 100px;
