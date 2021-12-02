@@ -30,8 +30,11 @@ hides the content, but not from the screen-reader */
     width: 1px;
 }
 
-h1, h2, h3 {
+h1, h2 {
     line-height: 1;
+}
+h3 {
+    margin: 0;
 }
 
 a {
@@ -154,7 +157,7 @@ body {
         width: 1px;
     }
 
-    &-toggle{ // button to toggle temperature unit swap
+    &-toggle { // button to toggle temperature unit swap
         cursor: pointer;
         width: 3.5em;
         border-radius: 100em;
@@ -186,8 +189,9 @@ body {
     position: absolute;
     background: var(--clr-light);
     width: 10em;
+    height: 2em;
     left: 50%;
-    transform: translate(-50%, -170%);
+    transform: translate(-50%, calc(-100% - 1.9rem));
     text-align: center;
     font-size: var(--fs-h2);
     font-family: inherit;  
@@ -201,7 +205,7 @@ body {
         font-size: calc(var(--fs-h2) * 1.1);
     }
 
-    span{
+    span {
         display: block;
         transform: rotate(0);
         transition: transform 300ms ease;
@@ -212,7 +216,7 @@ body {
     font-weight: var(--fw-normal);
 }
 
-.previous-weather-section{
+.previous-weather-section {
     background-color: var(--clr-light);
     color: var(--clr-grey);
     position: absolute;
@@ -223,16 +227,41 @@ body {
     padding: 2em 2em 4em 2em;
 }
 
-.previous-week{
+.previous-week {
     display: flex;
     justify-content: space-between;
 }
 
-.show-weather{ //previous weather showing
+.show-weather { //previous weather showing
     transform: translateY(0);
 
     .previous-weather-hide-arrow span {
         display: block;
         transform: rotate(180deg) translateY(-8px);
+    }
+}
+
+.previous-day {
+    color: black;
+    margin: 0;
+
+    &-date {
+        font-size: 1em;
+        color: var(--clr-grey);
+    }
+
+    &-more-info {
+        cursor: pointer;
+        border-radius: 100em;
+        border: 0;
+        background-color: var(--clr-dark);
+        color: var(--clr-light);
+        padding: 0.3em 1em;
+        margin-top: 1em;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: var(--clr-grey);
+        }
     }
 }
