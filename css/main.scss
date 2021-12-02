@@ -51,7 +51,7 @@ body {
     background-image: url(../images/mars-background.jpg);
     background-size: cover;
     height: 100vh;
-    // overflow: hidden;
+    overflow: hidden;
     color: var(--clr-light);
 }
 
@@ -144,7 +144,7 @@ body {
     label {
         cursor: pointer;
     }
-    input { // hides radio button circle
+    input { // hides radio buttons
         clip: rect(0 0 0 0);
         clip-path: inset(50%);
         height: 1px;
@@ -163,7 +163,7 @@ body {
         padding: 0;
         margin: 0 .5em;
 
-        &::after { //circle inside the switch
+        &::after { //circle inside switch
             content: '';
             align-self: center;
             display: block;
@@ -179,6 +179,60 @@ body {
 
 :checked ~ .unit-toggle::after { // any switch button coming after "checked"
     margin-left: 3px;
-    border-color: red;
 }
 
+
+.previous-weather-hide-arrow{ //previous weather hidden
+    position: absolute;
+    background: var(--clr-light);
+    width: 10em;
+    left: 50%;
+    transform: translate(-50%, -170%);
+    text-align: center;
+    font-size: var(--fs-h2);
+    font-family: inherit;  
+    border: 0;    
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    cursor: pointer;
+    color: var(--clr-grey);  
+
+    &:hover {
+        color: var(--clr-dark);
+        font-size: calc(var(--fs-h2) * 1.1);
+    }
+
+    span{
+        display: block;
+        transform: rotate(0);
+        transition: transform 300ms ease;
+    }
+}
+
+.section-title-previous-weather {
+    font-weight: var(--fw-normal);
+}
+
+.previous-weather-section{
+    background-color: var(--clr-light);
+    color: var(--clr-grey);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(60%);
+    transition: transform 350ms ease;
+    padding: 2em 2em 4em 2em;
+}
+
+.previous-week{
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-weather{ //previous weather showing
+    transform: translateY(0);
+
+    .previous-weather-hide-arrow span {
+        display: block;
+        transform: rotate(180deg) translateY(-8px);
+    }
+}

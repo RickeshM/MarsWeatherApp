@@ -50,6 +50,7 @@ body {
   background-image: url(../images/mars-background.jpg);
   background-size: cover;
   height: 100vh;
+  overflow: hidden;
   color: var(--clr-light);
 }
 
@@ -206,6 +207,76 @@ body {
 
 :checked ~ .unit-toggle::after {
   margin-left: 3px;
-  border-color: red;
+}
+
+.previous-weather-hide-arrow {
+  position: absolute;
+  background: var(--clr-light);
+  width: 10em;
+  left: 50%;
+  -webkit-transform: translate(-50%, -170%);
+          transform: translate(-50%, -170%);
+  text-align: center;
+  font-size: var(--fs-h2);
+  font-family: inherit;
+  border: 0;
+  -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
+          clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  cursor: pointer;
+  color: var(--clr-grey);
+}
+
+.previous-weather-hide-arrow:hover {
+  color: var(--clr-dark);
+  font-size: calc(var(--fs-h2) * 1.1);
+}
+
+.previous-weather-hide-arrow span {
+  display: block;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.section-title-previous-weather {
+  font-weight: var(--fw-normal);
+}
+
+.previous-weather-section {
+  background-color: var(--clr-light);
+  color: var(--clr-grey);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: translateY(60%);
+          transform: translateY(60%);
+  -webkit-transition: -webkit-transform 350ms ease;
+  transition: -webkit-transform 350ms ease;
+  transition: transform 350ms ease;
+  transition: transform 350ms ease, -webkit-transform 350ms ease;
+  padding: 2em 2em 4em 2em;
+}
+
+.previous-week {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.show-weather {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.show-weather .previous-weather-hide-arrow span {
+  display: block;
+  -webkit-transform: rotate(180deg) translateY(-8px);
+          transform: rotate(180deg) translateY(-8px);
 }
 /*# sourceMappingURL=main.css.map */

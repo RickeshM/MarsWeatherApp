@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Mars Weather</title>
 
-    <script src="scripts/index.js" defer> </script>
+    <script src="./scripts/index.js" defer> </script>
 </head>
 <body>
     
@@ -56,15 +56,46 @@
     </div>
 
     <!-- 7 day weather history -->`
-    <section class="previous-section">
-        <h2 class="section-title">Previous 10 Days</h2>
-
+    <section class="previous-weather-section">
+        <!-- when clicked toggle ".show-weather" class 
+            to section ".previous-weather-section" -->
+        <button class="previous-weather-hide-arrow"> <span>&#8593;</span> </button>
+        <h2 class="section-title-previous-weather hero-title">Previous 10 Days...</h2>
+            
         <div class="previous-week">
             <div class="previous-day">
                 <h3 class="prev-day-title">Sol 371</h3>
-                <div class="prev-day-date"></div>
-                <div class="reading">High: -20°C</div>
-                <div class="reading">Low: -100°C</div>
+                <div class="prev-day-date">September 31</div>
+                <div class="prev-day-reading-high">High: -20°C</div>
+                <div class="prev-day-reading-low">Low: -100°C</div>
+                <button class="prev-day-more-info">more info</button>
+            </div>
+            <div class="previous-day">
+                <h3 class="prev-day-title">Sol 371</h3>
+                <div class="prev-day-date">September 31</div>
+                <div class="prev-day-reading-high">High: -20°C</div>
+                <div class="prev-day-reading-low">Low: -100°C</div>
+                <button class="prev-day-more-info">more info</button>
+            </div>
+            <div class="previous-day">
+                <h3 class="prev-day-title">Sol 371</h3>
+                <div class="prev-day-date">September 31</div>
+                <div class="prev-day-reading-high">High: -20°C</div>
+                <div class="prev-day-reading-low">Low: -100°C</div>
+                <button class="prev-day-more-info">more info</button>
+            </div>
+            <div class="previous-day">
+                <h3 class="prev-day-title">Sol 371</h3>
+                <div class="prev-day-date">September 31</div>
+                <div class="prev-day-reading-high">High: -20°C</div>
+                <div class="prev-day-reading-low">Low: -100°C</div>
+                <button class="prev-day-more-info">more info</button>
+            </div>
+            <div class="previous-day">
+                <h3 class="prev-day-title">Sol 371</h3>
+                <div class="prev-day-date">September 31</div>
+                <div class="prev-day-reading-high">High: -20°C</div>
+                <div class="prev-day-reading-low">Low: -100°C</div>
                 <button class="prev-day-more-info">more info</button>
             </div>
         </div>
