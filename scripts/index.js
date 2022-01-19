@@ -42,8 +42,6 @@ getWeatherData().then(sols => {
     heroDisplaySelectedSol(sols);
     displayPreviousWeek(sols);
     updateTemperatureUnits();
-
-
 }).catch(error => {
     console.error(error);
 });
