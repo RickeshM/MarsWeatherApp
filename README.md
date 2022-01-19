@@ -6,7 +6,7 @@ A web app that displays the current and previous weather history on Mars using N
 
 I used this as practice for learning how to extract data from an external API and display this data on a live (local) webserver.
 
-### Learning Objectives:
+## Learning Objectives:
  #### JavaScript:
   - External API use
   - Promises (fetch())
