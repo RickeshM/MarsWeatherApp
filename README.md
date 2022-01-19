@@ -9,7 +9,7 @@ I used this as practice for learning how to extract data from an external API an
 ## Learning Objectives:
  #### JavaScript:
   - External API use
-  - Promises (fetch())
+  - Promises ( fetch() )
   - JSON
   - Destructuring/Spread operator
   - DOM Manipulation 
