@@ -98,7 +98,7 @@ body {
 }
 
 .temperature-section {   
-    --border-spacers: solid .25em var(--clr-accent-dark); // custom property with LOCAL scope
+    --border-spacers: solid .25em var(--clr-accent-dark); 
     border-left: var(--border-spacers);
     border-right: var(--border-spacers);
     padding: 0 2em;
