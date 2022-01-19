@@ -50,7 +50,6 @@ a {
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    // line-height: 1.6;
     background-image: url(../images/mars-background.jpg);
     background-size: cover;
     height: 100vh;
@@ -175,12 +174,13 @@ body {
     }    
 }
 
-:checked ~ .unit-toggle::after { // any switch button coming after "checked"
+// any switch button coming after "checked"
+:checked ~ .unit-toggle::after { 
     margin-left: 3px;
 }
 
 
-.previous-weather-hide-arrow{ //previous weather hidden
+.previous-weather-hide-arrow{ 
     position: absolute;
     background: var(--clr-light);
     width: 10em;
@@ -227,7 +227,7 @@ body {
     justify-content: space-between;
 }
 
-.show-weather { //previous weather showing
+.show-weather { 
     transform: translateY(0);
 
     .previous-weather-hide-arrow span {
